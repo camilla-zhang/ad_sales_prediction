@@ -43,7 +43,7 @@ The linear regression model shows that of the feature variables, we found google
 
 *Time Series Forecasting*
 
-We see that there is a clear indication of seasonality in our series. Particularly, the months from Oct to Jan tend to encounter large sale shocks. Thus, there is an indication of non-stationarity which is accounted for by differencing. Our automated arima model finds the optimal orders for our time series, which appears to be SARIMAX (0,1,0). Thus, while the data does not include moving averages or autocorrelation processes, I difference the data once to remove seasonal trends and make it stationary. The predictions for the last 28 weeks are quite accurate, as indicated by the figure below 
+We see that there is a clear indication of seasonality in our series. Particularly, the months from Oct to Jan tend to encounter large sale shocks. Thus, there is an indication of non-stationarity which is accounted for by differencing. Our automated arima model finds the optimal orders for our time series, which appears to be SARIMAX (0,1,0). Thus, while the data does not include moving averages or autocorrelation processes, I difference the data once to remove seasonal trends and make it stationary. The predictions for the last 28 weeks are quite accurate, as indicated by the figure below: 
 ![image](https://github.com/camilla-zhang/ad_sales_prediction/blob/main/figures/sarima.png)
 
 
