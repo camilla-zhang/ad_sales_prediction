@@ -18,29 +18,33 @@ In the time series analysis, I predict total ad sales from 113 time periods. I t
 ___
 
 Based on the series of scatterplots, we notice that advertisement sales are most highly correlated with impressions, especially those from Google or Affiliate Impressions. On the other hand, they are less correlated with views.
-![image]()
+![image](https://github.com/camilla-zhang/ad_sales_prediction/blob/main/figures/sales_scatter.png)
 
 The figure below demonstrates that of the regions in the data, the ads showing in regions B, E, and O incur the most sales.
-![image]()
+![image](https://github.com/camilla-zhang/ad_sales_prediction/blob/main/figures/sales_boxplot.png)
 
 The ad sales also show a clear seasonal trend, especially between the months from October to January.
-![image]()
+![image](https://github.com/camilla-zhang/ad_sales_prediction/blob/main/figures/sales_lineplot.png)
 
 ### Results
 ___
 
 *Supervised Learning*
 
-The linear regression model shows that of the feature variables, we found ______ to be the most significant indicators for media sales. The results from our supervised machine learning models are as follows:
+The results from our supervised machine learning models are as follows:
 
-1. Linear Regression: 78.5%
+1. XG Boost: 92.4%
 2. Random Forest: 89.7%
-3. XG Boost: 92.4%
+3. Linear Regression: 78.5% 
+
+The linear regression model shows that of the feature variables, we found google impressions, followed by email impressions, organic views, and paid views, to be the most significant positive indicators for media sales, whereas overall views was a significantly negative factor in terms of sales. 
+
+![image](https://github.com/camilla-zhang/ad_sales_prediction/blob/main/figures/sales_feature_significance.png)
 
 *Time Series Forecasting*
 
 We see that there is a clear indication of seasonality in our series. Particularly, the months from Oct to Jan tend to encounter large sale shocks. Thus, there is an indication of non-stationarity which is accounted for by differencing. Our automated arima model finds the optimal orders for our time series, which appears to be SARIMAX (0,1,0). Thus, while the data does not include moving averages or autocorrelation processes, I difference the data once to remove seasonal trends and make it stationary. The predictions for the last 28 weeks are quite accurate, as indicated by the figure below 
-![image]()
+![image](https://github.com/camilla-zhang/ad_sales_prediction/blob/main/figures/sarima.png)
 
 
 
