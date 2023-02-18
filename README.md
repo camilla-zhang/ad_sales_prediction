@@ -1,10 +1,12 @@
 # Supervised Learning and Time Series Forecasting for Advertisement Sales
 
-## Project Overview
+## Project Summary
 ___
 The objective of this study is to build models that can accurately predict the advertising sales made based on impressions and views from the media with three regression models. I also predict the sales for future periods through time-series forecasting. 
 
 This study served two purposes. First, by generating a series of models, I have determined which parameters and algorithms are better at predicting sales than others. More interestingly, this study uncovers the time trends of ad sales and which media channels should be focused more on to increase ad sales. 
+
+Our results found that the XGBoost regression, had the highest prediction score of 92%. Of the features in the model, impressions from google served as the most significant positive predictor for sales. We also found that the SARIMAX(0,1,0) model had the best performance for forecasting sales over time.
 
 ### Data and Methods
 ___
@@ -33,17 +35,16 @@ ___
 
 The results from our supervised machine learning models are as follows:
 
-1. XG Boost: 92.4%
-2. Random Forest: 89.7%
+1. XG Boost (610 trees, 4 splits, 0.05 learning rate): 92%
+2. Random Forest (890 trees, 20 splits, 3 minimum samples per node, 9 max features): 88.3%
 3. Linear Regression: 78.5% 
 
 The linear regression model shows that of the feature variables, we found google impressions, followed by email impressions, organic views, and paid views, to be the most significant positive indicators for media sales, whereas overall views was a significantly negative factor in terms of sales. 
-
 ![image](https://github.com/camilla-zhang/ad_sales_prediction/blob/main/figures/sales_feature_significance.png)
 
 *Time Series Forecasting*
 
-We see that there is a clear indication of seasonality in our series. Particularly, the months from Oct to Jan tend to encounter large sale shocks. Thus, there is an indication of non-stationarity which is accounted for by differencing. Our automated arima model finds the optimal orders for our time series, which appears to be SARIMAX (0,1,0). Thus, while the data does not include moving averages or autocorrelation processes, I difference the data once to remove seasonal trends and make it stationary. The predictions for the last 28 weeks are quite accurate, as indicated by the figure below: 
+We see that there is a clear indication of seasonality in our series. Particularly, the months from Oct to Jan tend to encounter large sale shocks. Thus, there is an indication of non-stationarity which is accounted for by differencing. Our automated arima model finds the optimal orders for our time series, which appears to be SARIMAX (0,1,0). Thus, while the data does not include moving averages or autocorrelation processes, I difference the data once to remove seasonal trends and make it stationary. The visualizations show that the predictions for the last 28 weeks are quite similar, as indicated by the figure below: 
 ![image](https://github.com/camilla-zhang/ad_sales_prediction/blob/main/figures/sarima.png)
 
 
