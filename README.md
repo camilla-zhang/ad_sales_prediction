@@ -39,7 +39,7 @@ The results from our supervised machine learning models are as follows:
 2. Random Forest (890 trees, 20 splits, 3 minimum samples per node, 9 max features): 88.3%
 3. Linear Regression: 78.5% 
 
-The linear regression model shows that of the feature variables, we found google impressions, followed by email impressions, organic views, and paid views, to be the most significant positive indicators for media sales, whereas overall views was a significantly negative factor in terms of sales. 
+The linear regression model shows that of the feature variables, we found google impressions, followed by email impressions, organic views, and paid views, to be the most significant positive indicators for media sales. While overall views show a significantly negative relationship, that could be a result of multicollinearity since we include different types of views as indicators. 
 ![image](https://github.com/camilla-zhang/ad_sales_prediction/blob/main/figures/sales_feature_significance.png)
 
 *Time Series Forecasting*
