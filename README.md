@@ -6,7 +6,7 @@ The objective of this study is to build models that can accurately predict the a
 
 This study served two purposes. First, by generating a series of models, I have determined which parameters and algorithms are better at predicting sales than others. More interestingly, this study uncovers the time trends of ad sales and which media channels should be focused more on to increase ad sales. 
 
-Our results found that the XGBoost regression, had the highest prediction score of 92%. Of the features in the model, impressions from google served as the most significant positive predictor for sales. We also found that the SARIMAX(0,1,0) model had the best performance for forecasting sales over time.
+Our results found that the XGBoost regression, had the highest prediction score of 91%. Of the features in the model, impressions from Google served as the most significant positive predictor for sales, while paid views not as helpful for sale growth. We also found that the SARIMAX(0,1,0) model had the best performance for forecasting sales over time.
 
 ### Data and Methods
 ___
@@ -35,8 +35,8 @@ ___
 
 The results from our supervised machine learning models are as follows:
 
-1. XG Boost (610 trees, 4 splits, 0.05 learning rate): 92%
-2. Random Forest (890 trees, 20 splits, 3 minimum samples per node, 9 max features): 88.3%
+1. XG Boost (610 trees, 4 splits, 0.05 learning rate): 90.9%
+2. Random Forest (890 trees, 20 splits, 3 minimum samples per node, 9 max features): 88.4%
 3. Linear Regression: 78.5% 
 
 The linear regression model shows that of the feature variables, we found google impressions, followed by email impressions, organic views, and paid views, to be the most significant positive indicators for media sales. While overall views show a significantly negative relationship, that could be a result of multicollinearity since we include different types of views as indicators. 
